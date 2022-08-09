@@ -1,0 +1,19 @@
+{% extends template('page-blank') %}
+
+{% define data = {
+    antelope: _view.antelope,
+    store: _view.store
+} %}
+
+{% block body %}
+    Store {{ data.store.name }}
+    {% if data.antelope %}
+        <div style="background-color: {{ data.antelope.color }};">
+            <div>Name: {{ data.antelope.name }}</div>
+            <div>Color: {{ data.antelope.color }}</div>
+        </div>
+    {% endif %}
+    {% if not data.antelope %}
+        <div>no antelopes</div>
+    {% endif %}
+{% endblock %}
