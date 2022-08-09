@@ -39,6 +39,8 @@ regions:
                 database: eu-docker
                 username: spryker
                 password: secret
+                ports:
+                    - "3307:3306"
 
         stores:
             DE:
@@ -218,7 +220,8 @@ services:
             spryker.local:
 
 docker:
-
+    ports:
+        - "3307:3306"
     ssl:
         enabled: false
         redirect: true
