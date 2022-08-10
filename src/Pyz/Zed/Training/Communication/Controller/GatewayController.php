@@ -15,9 +15,21 @@ use Spryker\Zed\Kernel\Communication\Controller\AbstractGatewayController;
  */
 class GatewayController extends AbstractGatewayController
 {
+    /**
+     * @api
+     */
     public function findAntelopeAction(AntelopeCriteriaTransfer $antelopeCriteria)
     {
         return $this->getFacade()
             ->findAntelope($antelopeCriteria);
+    }
+
+    /**
+     * @api
+     */
+    public function createAntelopeAction(AntelopeTransfer $antelopeTransfer)
+    {
+        return $this->getFacade()
+            ->createAntelope($antelopeTransfer);
     }
 }

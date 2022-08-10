@@ -43,14 +43,6 @@ regions:
                     - "3307:3306"
 
         stores:
-            DE:
-                services:
-                    broker:
-                        namespace: de-docker
-                    key_value_store:
-                        namespace: 1
-                    search:
-                        namespace: de_search
             AT:
                 services:
                     broker:
@@ -59,6 +51,15 @@ regions:
                         namespace: 2
                     search:
                         namespace: at_search
+            DE:
+                services:
+                    broker:
+                        namespace: de-docker
+                    key_value_store:
+                        namespace: 1
+                    search:
+                        namespace: de_search
+
     US:
         services:
             database:
