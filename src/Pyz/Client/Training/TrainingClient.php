@@ -25,6 +25,6 @@ class TrainingClient extends AbstractClient implements TrainingClientInterface
 
     public function createAntelope(AntelopeTransfer $antelopeTransfer): AntelopeTransfer
     {
-        return $this->getFactory()->createTrainingStub()->c
+        return $this->getFactory()->createTrainingStub()->createAntelope($antelopeTransfer);
     }
 }
