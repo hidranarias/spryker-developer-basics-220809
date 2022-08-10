@@ -171,7 +171,7 @@ services:
             username: "root"
             password: "secret"
         endpoints:
-            localhost:3306:
+            localhost:3307:
                 protocol: tcp
     broker:
         engine: rabbitmq

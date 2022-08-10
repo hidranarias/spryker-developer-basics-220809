@@ -219,10 +219,10 @@ $config[OauthConstants::PRIVATE_KEY_PATH] = str_replace(
 $config[OauthConstants::PUBLIC_KEY_PATH]
     = $config[OauthCryptographyConstants::PUBLIC_KEY_PATH]
     = str_replace(
-        '__LINE__',
-        PHP_EOL,
-        getenv('SPRYKER_OAUTH_KEY_PUBLIC') ?: ''
-    ) ?: null;
+    '__LINE__',
+    PHP_EOL,
+    getenv('SPRYKER_OAUTH_KEY_PUBLIC') ?: ''
+) ?: null;
 $config[OauthConstants::ENCRYPTION_KEY] = getenv('SPRYKER_OAUTH_ENCRYPTION_KEY') ?: null;
 $config[OauthConstants::OAUTH_CLIENT_IDENTIFIER] = getenv('SPRYKER_OAUTH_CLIENT_IDENTIFIER') ?: null;
 $config[OauthConstants::OAUTH_CLIENT_SECRET] = getenv('SPRYKER_OAUTH_CLIENT_SECRET') ?: null;
@@ -553,10 +553,10 @@ $config[ApplicationConstants::BASE_URL_YVES]
     = $config[ProductManagementConstants::BASE_URL_YVES]
     = $config[NewsletterConstants::BASE_URL_YVES]
     = sprintf(
-        'https://%s%s',
-        $yvesHost,
-        $yvesPort !== 443 ? ':' . $yvesPort : ''
-    );
+    'https://%s%s',
+    $yvesHost,
+    $yvesPort !== 443 ? ':' . $yvesPort : ''
+);
 
 $config[ShopUiConstants::YVES_ASSETS_URL_PATTERN] = '/assets/' . (getenv('SPRYKER_BUILD_HASH') ?: 'current') . '/%theme%/';
 
@@ -568,10 +568,10 @@ $glueHost = getenv('SPRYKER_API_HOST') ?: 'localhost';
 $gluePort = (int)(getenv('SPRYKER_API_PORT')) ?: 443;
 $config[GlueApplicationConstants::GLUE_APPLICATION_DOMAIN]
     = sprintf(
-        'https://%s%s',
-        $glueHost,
-        $gluePort !== 443 ? ':' . $gluePort : ''
-    );
+    'https://%s%s',
+    $glueHost,
+    $gluePort !== 443 ? ':' . $gluePort : ''
+);
 
 if (class_exists(TestifyConstants::class)) {
     $config[TestifyConstants::GLUE_APPLICATION_DOMAIN] = $config[GlueApplicationConstants::GLUE_APPLICATION_DOMAIN];
@@ -677,3 +677,4 @@ $config[AppCatalogGuiConstants::OAUTH_OPTION_AUDIENCE] = 'aop-atrs';
 $config[OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_PAYMENT_AUTHORIZE] = OauthAuth0Config::PROVIDER_NAME;
 $config[OauthClientConstants::OAUTH_GRANT_TYPE_FOR_PAYMENT_AUTHORIZE] = OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS;
 $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_PAYMENT_AUTHORIZE] = 'aop-app';
+$config['MY_STORE'] = 'Hidran';
