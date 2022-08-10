@@ -22,4 +22,9 @@ class TrainingClient extends AbstractClient implements TrainingClientInterface
             ->createTrainingStub()
             ->findAntelope($antelopeCriteria);
     }
+
+    public function createAntelope(AntelopeTransfer $antelopeTransfer): AntelopeTransfer
+    {
+        return $this->getFactory()->createTrainingStub()->c
+    }
 }

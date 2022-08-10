@@ -16,4 +16,7 @@ use Generated\Shared\Transfer\AntelopeResponseTransfer;
 interface TrainingClientInterface
 {
     public function findAntelope(AntelopeCriteriaTransfer $antelopeCriteria): AntelopeResponseTransfer;
+
+    public function createAntelope(AntelopeTransfer $antelopeTransfer): AntelopeTransfer;
+
 }
